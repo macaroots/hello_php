@@ -1,0 +1,74 @@
+:root {
+    --color1: white;
+    --bg-color1: #333;
+    --color2: #333;
+    --bg-color2: #eee;
+}
+
+body, ul, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    height: 100dvh;
+}
+
+header, footer {
+    grid-column: 1 / span 3;
+    background-color: var(--bg-color1);
+    color: var(--color1);
+    text-align: center;
+    padding: 1em;
+}
+
+nav {
+    background-color: var(--bg-color2);
+}
+
+nav ul {
+    list-style: none;
+    padding: 1em;
+}
+
+nav li {
+    padding: 1em;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--color2);
+    font-weight: bold;
+}
+
+main {
+    grid-column: 2;
+    padding: 0 2em;
+    overflow: auto;
+}
+
+form label {
+    display: table-row;
+}
+
+form label > * {
+    display: table-cell;
+    margin: 0.5em 1em;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+.pode {
+    color: green;
+    font-weight: bold;
+}
+
+.nao-pode {
+    color: red;
+    font-weight: bold;
+}
